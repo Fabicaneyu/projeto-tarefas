@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "4850bc64-416f-45e4-8c56-daaa1942c593",
+		"name": "reprograma-jess-04102020",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Ler todas as Tarefas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/tarefas/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tarefas",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ler tarefa por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/tarefas/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tarefas",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ler todas as Tarefas pelo título",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/tarefas/titulo?titulo=Estudar biologia",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tarefas",
+						"titulo"
+					],
+					"query": [
+						{
+							"key": "titulo",
+							"value": "Estudar biologia"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar tarefa por ID ",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/tarefas/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tarefas",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar uma tarefa",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n        \"titulo\": \"Aprender Nodejs\", \r\n        \"descricao\": \"Estudar nodejs com a Reprograma\", \r\n        \"prazo\": \"31/12/2020\", \r\n        \"responsavel\":\"Cecilia, Roberta\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/tarefas",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tarefas"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
